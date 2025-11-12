@@ -19,15 +19,15 @@ This project was created for practice and demonstrates modular CLI design, encry
 ## Commands
 
 ```
-init             # Initialize a new encrypted vault
-login            # Cache master password for this session
-logout           # Clear cached session password
-add              # Add a new note
-list             # List all notes
-view <query>     # View a note by ID or title
-update           # Edit a note by ID
-delete <id>      # Delete a note by ID
-change-pwd       # Change master password
+cargo run init             # Initialize a new encrypted vault
+cargo run login            # Cache master password for this session
+cargo run logout           # Clear cached session password
+cargo run add              # Add a new note
+cargo run list             # List all notes
+cargo run view <query>     # View a note by ID or title
+cargo run update           # Edit a note by ID
+cargo run delete <id>      # Delete a note by ID
+cargo run change-pwd       # Change master password
 ```
 
 ---
@@ -35,17 +35,17 @@ change-pwd       # Change master password
 ## Example
 
 ```
-$ encnotes init
+$ cargo run init
 Enter Master Password:
 Vault initialized successfully.
 
-$ encnotes add
+$ cargo run add
 Enter Master Password:
 Title: Example note
 Description: This is an encrypted note.
 Note saved successfully.
 
-$ encnotes list
+$ cargo run list
 1. Example note [e3b1a09c-...]
 ```
 
@@ -70,8 +70,6 @@ $ encnotes list
 
 - Vault file: `vault.enc`
 - Session file: `/tmp/encnotes.session`
-- Changing your master password re-encrypts the vault and saves a backup as `vault.enc.bak`.
-
 ---
 
 ## Purpose
